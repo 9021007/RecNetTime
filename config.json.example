@@ -1,0 +1,7 @@
+{
+    "username": "Your Rec Room @Username",
+    "password": "Your Rec Room Account Password",
+    "secret": "Your TOTP secret, if you have 2fa set to true",
+    "2fa": true,
+    "timezone": "America/Los_Angeles"
+}
