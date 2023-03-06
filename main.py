@@ -1,10 +1,8 @@
 from recnetlogin import RecNetLogin
 import hmac, base64, struct, hashlib, time
 import requests
-from html import escape
 import pytz
 from datetime import datetime
-import urllib.parse
 
 # from https://github.com/TheDanniCraft/2FA-Generator
 def get_hotp_token(secret, intervals_no):
