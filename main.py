@@ -56,12 +56,12 @@ def main() -> None:
 
 
 def auth():
-    print("authing")
+    print("Authorizing...")
     global decoded_token
     # check if token is within 70 seconds of expiring
     if decoded_token != {}:
         if decoded_token['exp'] - time.time() < 70:
-            print("token is expiring")
+            print("Token is expiring soon, refreshing...")
             rnl.close()
             time.sleep(5)
     # get 2fa code from secret
@@ -95,19 +95,19 @@ def auth():
 def topofmain():
     # check if token is empty
     if currenttoken == "":
-        print("token is empty")
+        print("Token not yet generated, wait a moment")
         auth()
         return
     # check if token is within 70 seconds of expiring
     elif decoded_token['exp'] - time.time() < 70:
-        print("token is expiring")
         auth()
         return
     else:
-        print("token is valid")
+        print("Token seems valid, continuing...")
         main()
 
 print("Welcome. This script will update your RecNet bio with the current time every minute.")
+print("This program will wait until the top of the minute to start. Please wait...")
 
 # execute loop at top of the minute
 while True:
