@@ -3,6 +3,7 @@ import hmac, base64, struct, hashlib, time
 import requests
 import pytz
 from datetime import datetime
+import json
 
 # from https://github.com/TheDanniCraft/2FA-Generator
 def get_hotp_token(secret, intervals_no):
