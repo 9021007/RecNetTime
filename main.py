@@ -5,7 +5,7 @@ import pytz
 from datetime import datetime
 import json
 
-# from https://github.com/TheDanniCraft/2FA-Generator
+# from https://github.com/TheDanniCraft/2FA-Generator, MIT License
 def get_hotp_token(secret, intervals_no):
     key = base64.b32decode(secret, True)
     msg = struct.pack(">Q", intervals_no)
