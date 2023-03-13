@@ -4,3 +4,5 @@
  Depends on a version of [RecNetLogin](https://github.com/Jegarde/RecNet-Login) that is pending merge, be careful! 
  
  See `config.json.example` for configuration options.
+
+#Do not use this. RR Staff has advised against this tool's use. 
